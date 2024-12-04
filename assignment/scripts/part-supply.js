@@ -4,25 +4,30 @@ console.log('****** Part Supply *******');
 // your code does what you expect!
 
 // 1. Create a variable called 'partsNeeded' with a value of the number 40.
+let partsNeeded = 40
 console.log('1. Create partsNeeded:');
 
 
 // 2. Create a variable called 'supplyChanges' whose value is an array containing
 //    the following numbers: 3, 5, -6, 0, 7, 11.
+let supplyChanges = [3,5,-6,0,7,11];
 console.log('2. Create supplyChanges:');
 
 
 // 3. Create a variable called 'secondItem' and assign it the value of the second
 //    item in the 'supplyChanges' array.
+let secondItem = supplyChanges[1];
 console.log('3. Access the second value of supplyChanges:');
 
 
 // 4. The last value in the 'supplyChanges' array was added by mistake.
 //    Remove it from the array and store it inside a new variable called 'removedItem'.
+let removedItem = supplyChanges.pop();
 console.log('4. Remove the last value from supplyChanges:');
 
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
+supplyChanges.push(25);
 console.log('5. Add the value 25 into supplyChanges.');
 
 
@@ -33,6 +38,23 @@ console.log('5. Add the value 25 into supplyChanges.');
 //      - If the value is a positive number, push it into the 'positives' array.
 //      - If the value is a negative number, push it into the 'negatives' array.
 //      - If the value is a zero, push it into the 'zeroes' array.
+let positives = [];
+let negatives = [];
+let zeroes = [];
+
+for (let i = 0; i < supplyChanges.length; i++) {
+  if(supplyChanges[i] > 0) {
+    positives.push(supplyChanges[i]);
+   } else if (supplyChanges[i] < 0) {
+    negatives.push(supplyChanges[i]);
+   } else {
+      zeroes.push(supplyChanges[i]); 
+     }
+
+    }
+  
+
+
 console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
 
 
